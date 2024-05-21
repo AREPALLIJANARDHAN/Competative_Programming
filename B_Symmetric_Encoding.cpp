@@ -4,6 +4,7 @@ string decode(string str){
      set <char > unique(str.begin(),str.end());
      string temp(unique.begin(),unique.end());
      sort(temp.begin(),temp.end());
+   // just sort unique characters
    
    map<char, char> decode_map;
     int len = temp.size();
@@ -11,7 +12,7 @@ string decode(string str){
     for (int i = 0; i < len; ++i)
     {
         decode_map[temp[i]] = temp[len - 1 - i];
-        decode_map[temp[len - 1 - i]] = temp[i];
+       // decode_map[temp[len - 1 - i]] = temp[i];
     }
  
     string s;
